@@ -1,0 +1,9 @@
+.button_ui {
+    background-color: transparent;
+    border: 0;
+    &.close {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+    }
+}

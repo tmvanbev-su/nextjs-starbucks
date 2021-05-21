@@ -1,0 +1,33 @@
+@use '../styles/abstracts/mixins';
+
+.container {
+    //background-color: cornflowerblue;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin: 0px auto;
+    width: 100%;
+    @include mixins.breakpoint(tablet) {
+        width: 700px;
+    }
+    @include mixins.breakpoint(laptop) {
+        width: 980px;
+    }
+    @include mixins.breakpoint(desktop) {
+        width: 1140px;
+    }
+    &--content {
+        width: 100%;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        margin: 0 auto;
+        @include mixins.breakpoint(tablet) {
+            width: 40em;
+        }
+        @include mixins.breakpoint(laptop) {
+            width: 45em;
+        }
+        @include mixins.breakpoint(desktop) {
+            width: 50em;
+        }
+    }
+}

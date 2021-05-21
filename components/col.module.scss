@@ -1,0 +1,19 @@
+@use '../styles/abstracts/mixins';
+
+$sizes: xs, sm, md, lg;
+
+.col {
+    width: 100%;
+    padding: 0 .5rem;
+    // background-color: orange;
+    margin-bottom: 1rem;
+    @each $size in $sizes {
+        @include mixins.breakpoint(#{$size}) {
+            @for $i from 1 through 12 {
+                &.col--#{$size}--#{$i} {
+                    width: calc(100% * (#{$i}/12));
+                }
+            }
+        }
+    } // for each loop end
+}
